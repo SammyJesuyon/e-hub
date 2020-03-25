@@ -15,6 +15,7 @@ import Modal from './components/Modal';
 class App extends Component {
   render ( ) {
     return (
+      
       <React.Fragment>
         <Navbar />
         <Switch>
