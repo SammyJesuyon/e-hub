@@ -88,7 +88,7 @@ this.setState(() => {return{cart: [...tempCart]}}, ()=> {this.addTotals()}
 )
 
 };
-decrement = id => {
+decrement = (id) => {
     let tempCart = [...this.state.cart];
     const selectedProduct = tempCart.find(item => item.id === id)
 
@@ -137,10 +137,10 @@ clearCart = () =>{
     });
 };
 addTotals = () =>{
-    let subTotal = 0 ;
+    let subTotal =  0;
     this.state.cart.map(item => (subTotal += item.total));
-    const tempTax = subTotal * 0;
-    const tax = parseFloat(tempTax.toFixed(2));
+    
+    const tax = 0;
     const total = subTotal + tax;
     this.setState(() =>{
         return {
